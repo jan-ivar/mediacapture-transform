@@ -116,7 +116,7 @@ video frames as input.
 
 <!-- ## Extension operation ## {#operation} -->
 
-## MediaStreamTrack readable attribute ## {#track-track}
+## MediaStreamTrack readable attribute ## {#track-readable}
 
 This specification adds a {{MediaStreamTrack/readable}} {{ReadableStream}}
 attribute to {{MediaStreamTrack}}. If the {{MediaStreamTrack}} is a video track,
@@ -231,7 +231,7 @@ is a gap in the timestamps of the frames.
 When a {{MediaStreamTrack}} |track| {{TrackEnded|ends}}, the [=trackClose=]
 algorithm must be executed with |track| as parameter.
 
-## VideoTrackSource ## {#generator}
+## VideoTrackSource ## {#video-track-source}
 A {{VideoTrackSource}} allows the creation of a video source for a
 {{MediaStreamTrack}} in the
 <a href="https://www.w3.org/TR/mediacapture-streams/#the-model-sources-sinks-constraints-and-settings">
@@ -313,6 +313,14 @@ It is defined by running the following steps.
 1. For each track `t` sourced from |source|, {{EndTrack|end}} `t`.
 2. Return [=a promise resolved with=] undefined.
 
+</dd>
+<dt><dfn attribute for=VideoTrackSource>muted</dfn></dt>
+<dd>Mutes the {{VideoTrackSource}}. The getter steps are to return
+[=this=].`[[isMuted]]`. The setter steps, given a value |newValue|, are to set [=this=].`[[isMuted]]` to |newValue|.
+</dd>
+<dt><dfn attribute for=VideoTrackSource>track</dfn></dt>
+<dd>The {{MediaStreamTrack}} output. The getter steps are to return
+[=this=].`[[track]]`.
 </dd>
 </dl>
 
