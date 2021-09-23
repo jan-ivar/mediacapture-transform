@@ -329,10 +329,6 @@ A {{VideoTrackSource}} acts as the source for one or more {{MediaStreamTrack}}s.
 This section adds clarifications on how a {{MediaStreamTrack}} sourced from a
 {{VideoTrackSource}} behaves.
 
-#### clone #### {#video-source-clone}
-The {{MediaStreamTrack/clone}} method returns a new {{MediaStreamTrack}} object
-whose source is the same {{VideoTrackSource}}.
-
 #### stop #### {#video-source-stop}
 The {{MediaStreamTrack/stop}} method stops the track. When the last track
 sourced from a {{VideoTrackSource}} ends, that {{VideoTrackSource}}'s
