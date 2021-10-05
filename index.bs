@@ -2,14 +2,13 @@
 Title: MediaStreamTrack Transform
 Shortname: mediacapture-transform
 Level: None
-Status: ED
+Status: UD
 Group: webrtc
-Repository: w3c/mediacapture-transform
-URL: https://w3c.github.io/mediacapture-transform/
-Editor: Harald Alvestrand, Google https://google.com, hta@google.com
-Editor: Guido Urdaneta, Google https://google.com, guidou@google.com
-Abstract: This API defines an API surface for manipulating the bits on
-Abstract: {{MediaStreamTrack}}s carrying raw data.
+Repository: jan-ivar/mediacapture-transform
+URL: https://jan-ivar.github.io/mediacapture-transform/
+Editor: Jan-Ivar Bruaroey, Mozilla https://www.mozilla.org, jib@mozilla.com
+
+Abstract: Proposal <a href="https://github.com/w3c/mediacapture-transform/issues/59">#59</a> by Jan-Ivar Bruaroey with help from Youenn Fablet, written as a future PR off a fork of mediacapture-transform, and thus builds on text from other authors as well. This API defines an API surface for manipulating the bits on {{MediaStreamTrack}}s carrying raw data.
 Markup Shorthands: css no, markdown yes
 </pre>
 <pre class=anchors>
