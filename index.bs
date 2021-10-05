@@ -118,9 +118,10 @@ video frames as input.
 ## MediaStreamTrack readable attribute ## {#track-readable}
 
 This specification adds a {{MediaStreamTrack/readable}} {{ReadableStream}}
-attribute to {{MediaStreamTrack}}. If the {{MediaStreamTrack}} is a video track,
-consumers may read {{VideoFrame}}s from it. The {{MediaStreamTrack}} is the
-[=underlying source=] of its {{MediaStreamTrack/readable}} member.
+attribute to {{MediaStreamTrack}} in the dedicated worker environment. If the
+{{MediaStreamTrack}} is a video track, consumers may read {{VideoFrame}}s from
+it. The {{MediaStreamTrack}} is the [=underlying source=] of its
+{{MediaStreamTrack/readable}} member.
 
 Once the {{ReadableStream}} becomes locked, the {{MediaStreamTrack}} must, in its
 role as the [=underlying source=], maintain a circular queue to buffer video frames
@@ -234,9 +235,9 @@ algorithm must be executed with |track| as parameter.
 A {{VideoTrackSource}} allows the creation of a video source for a
 {{MediaStreamTrack}} in the
 <a href="https://www.w3.org/TR/mediacapture-streams/#the-model-sources-sinks-constraints-and-settings">
-MediaStream model</a>. It has a two readonly attributes: a
-{{VideoTrackSource/writable}} {{WritableStream}} and a {{VideoTrackSource/track}}
-{{MediaStreamTrack}}.
+MediaStream model</a> in the dedicated worker environment. It has a two readonly
+attributes: a {{VideoTrackSource/writable}} {{WritableStream}} and a
+{{VideoTrackSource/track}} {{MediaStreamTrack}}.
 
 The {{VideoTrackSource}} is the [=underlying sink=] of its
 {{VideoTrackSource/writable}} attribute. The {{VideoTrackSource/track}} attribute
